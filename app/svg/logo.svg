@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 920.02051 299.61193">
+  <defs>
+    <style>
+      .cls-1{fill:#9d7ecb;}.cls-2,.cls-5{fill:#5e5e5f;}.cls-2{fill-rule:evenodd;}.cls-3{font-size:200px;fill:#fff;font-family:Roboto-Regular, Roboto;}.cls-4{letter-spacing:-0.01953em;}
+    </style>
+  </defs>
+  <path d="M0 0h920.02051v265.42461H0z" class="cls-1"/>
+  <path d="M0 215l37.32-32.242 35.664 21.205 44.51-35.139 11.713 11.128 25.769-26.355 45.095 53.017 23.426 11.405 15.813-11.405L325.667 231 371 200.333l59.333 21.334L470 182l17.333 17.333L499 185l34 38.667 37.333-27.334 16 14.667L647 178.333l69.333 27.334 61.334 8.666 38-22.034L859 213.667l26-11.334L904.333 213l15.688 2.304-.003 50.121H0V215z" class="cls-2"/>
+  <text class="cls-3" transform="translate(68 226.804)">
+    U<tspan x="129.6875" y="0" class="cls-4">r</tspan><tspan x="193.45703" y="0">alConf</tspan>
+  </text>
+  <path d="M0 258.20306h920.02051v63.94527H0z" class="cls-5"/>
+</svg>

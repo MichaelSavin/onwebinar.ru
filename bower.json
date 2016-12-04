@@ -1,0 +1,16 @@
+{
+  "name": "my-app",
+  "description": "",
+  "main": "gulpfile.js",
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/webSergik/MyAppGulp",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor/",
+    "test",
+    "tests"
+  ]
+}

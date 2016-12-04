@@ -1,0 +1,942 @@
+@import 'reset/reset.css'
+
+@lost flexbox flex
+
+$block = 30px
+$htmlFontSize = 100%
+$bodyBackgroundColor = #61646d
+$bodyColor = #000
+$bodyFontFamily = 'Roboto', sans-serif
+$bodyFontFamilyFallback = sans-serif
+$bodyFontSize = .875rem
+$bodyFontWeight = 100
+$bodyLineHeight = 1.5
+$gridMaxWidth = 20rem
+$gridWidth = 90%
+$confIdFieldBackgroundColor = #42454e
+$confIdFieldBorderRadius = 6px
+$confIdFieldFontSize = 1.2rem // .75
+$confIdFieldPadding = 1rem //.5
+$confIdFieldInputIdFieldBackgroundColor = #fff
+$confIdFieldInputIdFieldColor = #42454e
+$confIdFieldInputIdFieldPaddingHorizontal = .5rem
+$confIdFieldInputIdFieldPaddingVertical = .375rem
+$lightPurple = #9d7ecb
+$confIdFieldInputButtonColor = #fff
+$confIdFieldInputButtonFontWeight = 100
+$confIdFieldInputButtonPaddingHorizontal = .625rem
+$confIdFieldInputButtonPaddingVertical = .375rem
+$confIdFieldInputButtonFocusBackgroundColor = darken($lightPurple, 10%)
+
+html
+	color: white
+	text-size-adjust: 100%
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale
+	font-feature-settings: 'liga' 1
+	font-feature-settings: 'kern' 1
+	line-height: 1.4446
+  letter-spacing: .03rem
+
+div
+	margin-top: ($block / 2)
+	margin-bottom: ($block / 2)
+
+body
+	background-color: #f1f1f1
+	font-family: 'Roboto', Helvetica, Arial, sans-serif
+	scroll-behavior: smooth
+
+::selection
+		background: #ddb7f7!important
+		color: #333!important
+
+h1
+	font-size: responsive 32px 48px
+
+h2
+	font-size: responsive 24px 36px
+
+h3
+	font-size: responsive 21px 24px
+
+h4
+	font-size: responsive 18px 21px
+
+h5
+	font-size: responsive 17px 20px
+
+h6
+	font-size: responsive 16px 19px
+
+p
+	font-size: responsive 16px 20px
+
+b
+	font-size: responsive 16px 20px
+
+.logo-wrapper
+	justify-content: flex-end
+	display: flex
+	@media screen and (max-width: 700px)
+		justify-content: center
+
+.opening_logo
+	display: flex
+	justify-content: center
+
+.button
+	background-color: $lightPurple
+	color: $confIdFieldInputButtonColor
+	font-weight: $confIdFieldInputButtonFontWeight
+	transition: all .3s ease
+	font-size: responsive 13px 16px
+	font-weight: 300
+	border-radius: 6px
+	padding-left: 20px
+	padding-right: 20px
+	margin: 5px
+	border: none
+	display: flex
+  user-select: none
+	@media screen and (max-width: 640px)
+		font-weight: 400
+
+.button:hover,
+.button:focus
+	background: darken($lightPurple, 10%)
+
+.main-button-wrapper
+	justify-content: center
+	align-items: center
+	display: flex
+
+.main-button
+	overflow: hidden
+	height: 55px
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 60%
+	cursor: pointer
+	@media screen and (max-width: 640px)
+		width: 80%
+
+.ui-icon__svg
+	stroke: #74a3c7
+	stroke-linejoin: round
+	stroke-linecap: round
+	stroke-miterlimit: 10
+	fill: #3e4757
+	transition: stroke .2s ease-in-out
+
+.ui-button_uppercase
+	font-size: 15px
+	line-height: 18px
+	letter-spacing: 0.071em
+	text-transform: uppercase
+	display: block
+
+.ui-icon
+	display: inline-block
+	position: relative
+	width: 30px
+	height: 30px
+	vertical-align: middle
+	line-height: 30px
+	border-radius: 50%
+
+.ui-icon_purple
+	background-color: $lightPurple
+	fill: #fff
+
+.ui-icon_size_198
+	width: 198px
+	height: 198px
+
+.ui-showcase__svg
+	margin-bottom: 20px
+
+.ui-showcase__item
+	text-align: center
+
+.warranty-wrapper
+	lost-column:1/1
+	display: flex
+	justify-content: center
+	margin-top: 40px
+	margin-bottom: 40px
+	@media screen and (max-width: 500px)
+		margin-top: 20px
+		margin-bottom: 20px
+
+.warranty
+	font-weight: 300
+	width: 100%
+	text-align: center
+
+.loader
+	margin: 0 !important
+	width: 100px !important
+	height: 100px !important
+	justify-content: center !important
+	background-clip: border-box !important
+	border: 1px double red !important
+	border-radius: 1000px !important
+	border-color: #EEEEEE #EEEEEE #EEEEEE #61c67e !important
+	animation: rotating 2s 0.25s linear infinite !important
+
+@keyframes rotating
+	from {
+		transform: rotate(0deg)
+	 }
+	to {
+		transform: rotate(360deg)
+	}
+
+section
+	lost-center: 1200px
+	padding-left: 20px
+	padding-right: 20px
+
+	&:last-of-type
+		margin-bottom: 0
+
+	&:nth-of-type(1)
+		background: url('../img/speaker.jpg') no-repeat center center
+		background-size: cover
+		border-bottom: 1px solid #666
+		border-color: #e5e5e5
+
+		div
+			@media screen and (max-width: 639px)
+				lost-column: 1/1 flex
+			@media screen and (min-width: 640px)
+				lost-column: 1/1 flex
+			@media screen and (min-width: 800px)
+				lost-column: 1/1 flex
+
+			// logo-wrapper
+			&:first-child
+				margin-top: ($block / 2)
+				margin-bottom: ($block / 2)
+				&:first-child
+					lost-column: 1/1
+
+				.logo
+					padding: 0 10px 0 10px
+					display: flex
+					justify-content: center
+					align-items: center
+					background: rgba(1,1,1,0.3)
+					border-radius: 6px
+					@media screen and (max-width: 700px)
+						margin: 0px
+
+				.logo use
+					background-size: cover
+					min-height: 55px
+					min-width: 150px
+
+				.form-field
+					display: flex
+					width: auto
+					margin: 0
+					padding: 0
+					height: 55px
+					@media screen and (max-width: 1000px)
+						flex-wrap: nowrap
+
+				.opening_input
+					outline: none
+					vertical-align: top
+					flex-grow: 1
+					border-right: 0
+					border-left: 0
+					@media screen and (max-width: 500px)
+						width: 110px
+						background: red
+						font-size: 20px
+
+				.text
+					font-size: $confIdFieldFontSize
+					font-weight: 300
+
+				.text input[type="text"]
+					background-color: $confIdFieldInputIdFieldBackgroundColor
+					color: $confIdFieldInputIdFieldColor
+					padding: $confIdFieldInputIdFieldPaddingVertical $confIdFieldInputIdFieldPaddingHorizontal
+
+				.play-button
+					width: 100px
+
+			//Opening
+			&:nth-of-type(2)
+				lost-column: 1/1
+				text-align: left
+				margin-top: ($block / 2)
+				margin-bottom: ($block / 2)
+				@media screen and (min-width: 900px)
+					padding-top: 200px
+				@media screen and (max-width: 999px)
+					padding-top: 77px
+
+				.opening-title
+					font-family: 'Roboto', sans-serif
+					color: #fff
+					font-weight: 300
+					margin-bottom: 40px
+
+				.opening-text
+					font-weight: 300
+					margin-bottom: 40px
+
+				.opening_back
+					background: rgba(0, 0, 0, 0.5)
+					border-radius: 6px
+					padding: 20px
+					@media screen and (max-width: 500px)
+						padding: 5px
+						width: 100%
+
+	// Logos, titles and description
+	&:nth-of-type(2)
+		background-color: #fff
+		padding-top: 40px
+		padding-bottom: 40px
+		justify-content: center
+		align-items: center
+
+
+		.text-block
+			//
+			margin-top: ($block / 2)
+			margin-bottom: ($block / 2)
+			transition: 0.2s linear
+			&:nth-of-type(1)
+				@media screen
+					background-image: linear-gradient(34deg, #661cb7 0%, #15868c 100%)
+
+			&:nth-of-type(2)
+				@media screen
+					background-image: linear-gradient(34deg, #661cb7 0%, #15868c 100%)
+
+			&:nth-of-type(3)
+				@media screen
+					background-image: linear-gradient(34deg, #661cb7 0%, #15868c 100%)
+
+			&:hover
+				box-shadow: 0 0 17px 0px rgba(0,0,0,0.4)
+		.text-block-svg
+			justify-content: center
+			text-align: center
+			display: block
+
+			span
+				justify-content: center
+				svg
+					justify-content: center
+					align-self: center
+					use
+						justify-content: center
+						align-self: center
+
+		.text-block-h
+			width: initial;
+			display: contents;
+			@media screen and (min-width: 400px) and (max-width: 639px)
+				lost-column: 1/1
+				flex-wrap: wrap
+				justify-content: center
+				align-items: center
+			@media screen and (min-width: 640px)
+				lost-column: 1/3 flex
+				flex-wrap: wrap
+				justify-content: center
+				align-items: center
+
+		.text-block-head
+			width: 100%
+			display: inline-flex;
+			margin-bottom: 0
+			justify-content: center
+			margin-top: ($block / 2)
+			margin-bottom: ($block / 2)
+			@media screen and (min-width: 400px) and (max-width: 639px)
+				lost-column: 1/1 flex
+				height: 100%
+			@media screen and (min-width: 640px)
+				lost-column: 1/2 flex
+				height: 100%
+
+		.explanation
+			text-align: left
+			display: inline-block
+			margin-top: ($block / 2)
+			margin-bottom: ($block / 2)
+			@media screen and (min-width: 400px) and (max-width: 639px)
+				lost-column: 1/1 flex
+			@media screen and (min-width: 640px)
+				lost-column: 1/2 flex
+				height: 100%
+
+		.text-block-head,
+		.explanation
+			padding: 20px
+			padding-bottom: 20px
+
+
+		.text-block-title
+			font-weight: 300
+			display: block;
+			text-align: center;
+
+		p
+			font-weight: 300
+			line-height: 30px
+			color: #9299a2
+			margin-bottom: 20px
+			color: #fafafa
+
+		b
+			flex-wrap: wrap
+			font-weight: 400
+			line-height: 30px
+			color: #fafafa
+
+		div
+			lost-flex-container: column
+			width: 100%
+			border-radius: 6px
+			box-shadow: 0 0 17px 0 rgba(0,0,0,0)
+			@media screen and (min-width: 400px)
+				lost-column: 1/1
+			@media screen and (min-width: 640px)
+				lost-column: 1/1
+				flex-wrap: wrap
+				flex-direction: row
+
+	// Instruments of collaborative work
+	&:nth-of-type(3)
+		border-top: 1px solid #dddfe0
+		//background: #3e3c49
+		background: #2f3744
+		flex-direction: row
+		justify-content: center
+		align-items: stretch
+		align-content: center
+		padding-top: 50px
+		padding-bottom: 40px
+
+		.item
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-wrap: wrap
+			text-align: center
+
+		div
+			margin-top: 15px
+			line-height: 25px
+			font-weight: normal
+			padding: ($block / 2)
+			align-items: center
+			align-content: center
+
+			span
+				transition: .3s all
+				&:hover
+					box-shadow: 0 0 17px 0 rgba(0,0,0,0.12)
+					z-index: 2
+
+			h1
+				line-height: normal
+				text-align: center
+				font-weight: 300
+
+			p
+				text-align: center
+				font-weight: 300
+				width: 100%
+
+			&:first-child
+				lost-waffle: 1/1 flex
+			@media screen and (min-width: 400px)
+				lost-row: 1/2 flex
+				flex-wrap: wrap
+				flex-direction: row
+			@media screen and (min-width: 640px)
+				lost-waffle: 1/2 1 0 flex
+			@media screen and (min-width: 800px)
+				lost-waffle: 1/2 1 0 flex
+			@media screen and (min-width: 1200px)
+				lost-waffle: 1/4 0 0 flex
+				margin-bottom: 20px
+
+	// Images of product components
+	&:nth-of-type(4)
+		background-color: #fff
+		color: #333
+		padding-top: 50px
+		padding-bottom: 40px
+
+		.equipment-container
+			//
+
+		div
+			lost-flex-container: row
+
+			div
+				display: flex
+				lost-column:1/1
+
+				// Text and Pictures
+				&:nth-child(odd)
+					@media screen and (max-width: 500px)
+						margin: 0
+					margin: 30px
+					lost-column: 1/1 1
+
+					div
+						// Text
+						&:nth-child(odd)
+							text-align: left
+							@media screen and (max-width: 400px) and (min-width: 400px)
+								lost-column: 1/1
+							@media screen and (min-width: 640px)
+								lost-column: 1/1
+							@media screen and (min-width: 800px)
+								lost-column: 1/1
+							@media screen and (min-width: 1200px)
+								lost-column: 1/2
+
+						// Picture
+						&:nth-child(even)
+							@media screen and (max-width: 400px) and (min-width: 400px)
+								lost-column: 1/1
+							@media screen and (min-width: 640px)
+								lost-column: 1/1
+							@media screen and (min-width: 800px)
+								lost-column: 1/1
+							@media screen and (min-width: 1200px)
+								lost-column: 1/2
+
+				&:nth-child(even)
+					lost-column: 1/1 1
+					div
+						// Text
+						&:nth-child(odd)
+							text-align: left
+							width: 100%
+							@media screen and (max-width: 400px) and (min-width: 400px)
+								lost-column: 1/1
+							@media screen and (min-width: 640px)
+								lost-column: 1/1
+							@media screen and (min-width: 800px)
+								lost-column: 1/1
+								padding: inherit
+							@media screen and (min-width: 1200px)
+								lost-move: 1/2
+								lost-column: 1/2
+
+						//Picture
+						&:nth-child(even)
+							@media screen and (max-width: 400px) and (min-width: 400px)
+								lost-column: 1/1
+							@media screen and (min-width: 640px)
+								lost-column: 1/1
+							@media screen and (min-width: 800px)
+								lost-column: 1/1
+							@media screen and (min-width: 1200px)
+								lost-move: -1/2
+								lost-column: 1/2
+
+		.equipment-header
+			lost-row: 1/1
+			lost-align: center
+			display:flex
+			justify-content:center
+			align-items:center
+			font-weight: 300
+
+		.left-side-text,
+		.right-side-text
+			box-sizing: border-box
+			transition: all .3s ease
+			border-radius: 6px
+			box-shadow: 0 0 17px 0 rgba(0,0,0,0)
+
+		.left-side-text:hover,
+		.right-side-text:hover
+			box-shadow: 0 0 17px 0 rgba(0,0,0,.12)
+
+		.title
+			color: #fff
+			background-image: linear-gradient(222deg, #ac20d4 0%, #7428c7 50%, #424d9a 100%)
+			border-top-right-radius: inherit
+			border-top-left-radius: inherit
+			padding: 38px
+			font-weight: 300
+			width: 100%
+
+		.description
+			border: 1px solid #dddfe0
+			border-top: 0
+			border-bottom-right-radius: inherit
+			border-bottom-left-radius: inherit
+			overflow: hidden
+			font-weight: 300
+			color: #333
+			background-color: #fff
+			padding: 38px
+			line-height: 30px
+
+		.image
+			height: 500px
+			max-width: 100%
+
+		.mcu
+			background: url('../img/mcu.png') no-repeat center center
+			background-size: contain
+
+		.mic
+			background: url('../img/mic.png') no-repeat center center
+			background-size: contain
+
+		.ptz
+			background: url('../img/ptz.png') no-repeat center center
+			background-size: contain
+
+		.tv
+			background: url('../img/tv.png') no-repeat center center
+			background-size: contain
+
+	//Form
+	&:nth-of-type(5)
+		border-top: 1px solid #dddfe0
+		box-sizing: border-box
+		justify-content: center
+		max-width: 1200px
+		background: #fff
+		color: #333
+		padding-top: 50px
+		padding-bottom: 50px
+
+		h1
+			line-height: 54px
+			font-weight: 300
+			text-align: center
+
+		div
+		.form-container
+			lost-column: 1/1
+			margin: 20px 10% 0 10%
+
+    #thankyou_message
+			font-weight: 300
+			text-align: center
+			transition: all 2s linear
+
+		.form-application
+			//
+
+		.form-header
+			min-height: 95px
+			border-radius: 6px 6px 0 0
+			width: 100%
+			background: #3e4757
+			color: #fff
+			margin: 0 auto 22px
+
+			div
+				margin: auto
+				padding: 20px 0
+				padding-top: 29px
+				padding-left: 30px
+				padding-right: 30px
+
+				h2
+					font-size: 22px
+					line-height: 28px
+					font-weight: 300
+
+		.form-wrapper
+			lost-column: 1/1
+			display: flex
+			justify-content: center
+			@media screen and (min-width: 640px)
+				padding: 0 10% 0 10%
+
+			form
+				width: 100%;
+				padding: 0 5% 0 5%
+				display: flex
+				flex-direction: column
+
+				.input-container
+					display: flex
+					width: 100%
+					height: 66px
+
+				.button-container
+					margin-top: 30px
+					margin-bottom: 30px
+					text-align: center
+					lost-column: 1/1
+					display: flex
+					justify-content: center
+					@media screen and (max-width: 900px)
+						flex-direction: column-reverse
+				div
+					position: relative
+
+					label#form
+						position: absolute
+						top: 0
+						left: 0
+						color: #757575
+						font-weight: 300
+						line-height:55px
+						transition: 0.2s ease
+						line-height: 1.3
+						top: 21px
+						left: 17px
+						@media screen and (max-width: 639px)
+							font-size: 13px
+							font-weight: 400
+						@media screen and (min-width: 640px)
+							font-size: 17px
+						@media screen and (min-width: 800px)
+							font-size: 17px
+						@media screen and (min-width: 1200px)
+							font-size: 17px
+
+					.label_focus
+							transform: translate(0%, -60%)
+							font-size: 13px
+
+					input.order_field
+						@media screen and (max-width: 639px)
+							font-size: 13px
+							line-height: 1.3
+						@media screen and (min-width: 640px)
+							font-size: 17px
+						@media screen and (min-width: 800px)
+							font-size: 17px
+						@media screen and (min-width: 1200px)
+							font-size: 17px
+						background: #eef2f7
+						background-clip: padding-box
+						border: 1px solid #eef2f7
+						border-radius: 6px
+						outline: none
+						position: relative
+						width: 100%
+						height: 66px
+						color: #212121
+						font-weight: 300
+						padding: 30px 18px 9px 17px
+
+						&:hover,
+						&:focus
+							border: 1px solid #dfe0e1
+					input.order_field_focused
+						background: #fff
+
+					button
+						@media screen and (max-width: 900px)
+							lost-column: 1/1
+							width: 100%
+						border: none
+						border-radius: 6px
+						outline: none
+						vertical-align: middle
+						background: $lightPurple
+						cursor: pointer
+						user-select: none
+						text-decoration: none
+						white-space: nowrap
+						box-sizing: border-box
+						transition: all .3s ease
+						display: inline-block
+						padding: 21px 40px
+						font-size: 17px
+						line-height: 24px
+						font-weight: 300
+						color: #fff
+
+						&:hover,
+						&:focus
+							background: darken($lightPurple, 10%)
+
+					.timeline_dropdown-select
+						display: flex
+						justify-content: center
+						align-items: center
+						align-content: center
+						cursor: pointer
+						lost-column: 1/2
+						margin-top: 0
+						padding: 5px 0 13px 47px
+						@media screen and (max-width: 900px)
+							lost-column: 1/1
+
+						label
+							font-weight: 400
+							font-size: responsive
+
+						input[type="checkbox"]
+							border: 0
+							clip: rect(0 0 0 0)
+							height: 1px
+							margin: -1px
+							overflow: hidden
+							padding: 0
+							position: absolute
+							width: 1px
+
+						input[type="checkbox"] + label
+							position: absolute
+							padding: 10px
+							padding-left: 2.4em
+							left: 0
+							top: 10px
+							user-select: none
+							cursor: pointer
+
+							&:before
+								content: ''
+								color: orange
+								position: absolute
+								top: 5px
+								left: 0
+								width: 28px
+								height: 28px
+								border-radius: 5px
+								border: 1px solid #dfe0e1
+								background-color: #f1f3f8
+								font-size: 18px
+								text-align: center
+
+							&:after
+								content: ''
+								background-color: orange
+								position: absolute
+								top: 10px
+								left: 5px
+								width: 14px
+								height: 14px
+								transform: scale(0)
+								transition: transform 200ms ease-out
+
+						input[type="checkbox"]
+							+ label
+									&:after
+										background-color: transparent
+										width: 18px
+										height: 11px
+										border-style: solid
+										border-color: #7db343
+										border-radius: 1px
+										border-width: 0 0 3px 3px
+										border-image: none
+										transform: rotate(-45deg) scale(0)
+							&:checked
+								+ label
+									&:after
+										content: ''
+										transform: rotate(-45deg) scale(1)
+
+	// Footer
+	&:nth-of-type(6)
+		box-sizing: border-box
+		font-size: 14px
+		border-top: 1px solid #dddfe0
+		background-color: #fff
+		position: relative
+		color: #333
+		padding-top: 20px
+		padding-bottom: 20px
+
+		div
+			width: 100%
+			text-align: left
+			margin: 0
+			@media screen and (max-width: 639px)
+				lost-waffle: 1/1
+			@media screen and (min-width: 640px)
+				lost-waffle: 1/1
+			@media screen and (min-width: 800px)
+				lost-waffle: 1/2
+			@media screen and (min-width: 1200px)
+				lost-waffle: 1/2
+				padding: 20px
+				margin: 0
+			div
+				lost-waffle: 1/1 1 0
+
+
+			span
+				color: #9299a2
+				display: block
+				margin-bottom: 4px
+				font-size: 13px
+				line-height: 18px
+
+			.footer-block
+				@media screen and (max-width: 800px)
+					padding-top: 20px
+
+			.test
+				color: #fff
+				height: 66px
+				justify-content: center
+				display: flex
+				align-items: center
+
+			a:nth-of-type(1),
+			a:nth-of-type(2)
+				font-weight: 300
+				color: #333
+				text-decoration: none
+				font-size: responsive 18px 30px
+				cursor: default
+
+			a:nth-of-type(2)
+				padding: 0
+				margin: 0
+				width: 100%
+				display: flex
+
+		.phone nobr
+			line-height: 47px
+			font-weight: 300
+			color: #333
+			text-decoration: none
+			cursor: default
+
+		span
+			display: block
+			margin-bottom: 4px
+			font-size: 13px
+			font-weight: 400
+			line-height: 18px
+			color: #9299a2
+
+		address
+			margin-top: 10px
+			font-style: normal
+			line-height: 18px
+			@media screen and (max-width: 800px)
+				margin-top: 30px
+
+		text
+			display: inline-block
+			vertical-align: top
+			font-size: 13px
+			font-weight: 400
+			line-height: 17px
+			text-align: left
+			color: #9299a2
+			white-space: nowrap

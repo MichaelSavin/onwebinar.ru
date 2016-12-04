@@ -1,10 +1,10 @@
-var gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    browserSync = require('browser-sync');
+let gulp = require('gulp'),
+  plumber = require('gulp-plumber'),
+  browserSync = require('browser-sync');
 
-gulp.task('html', function() {
+gulp.task('html', () => {
   gulp.src('app/pages/**/*.html')
     .pipe(plumber())
     .pipe(gulp.dest('public'))
-    .pipe(browserSync.reload({stream: true}));
+    .pipe(browserSync.reload({ stream: true }));
 });

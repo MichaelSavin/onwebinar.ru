@@ -62,7 +62,7 @@
       return;
     };
     // url encode form data for sending as post data
-    const encoded = Object.keys(data).map((k) => `${encodeURIComponent(k)  }=${  encodeURIComponent(data[k])}`).join('&');
+    const encoded = Object.keys(data).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(data[k])}`).join('&');
     xhr.send(encoded);
   };
 
